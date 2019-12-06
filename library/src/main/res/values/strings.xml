@@ -1,0 +1,12 @@
+<resources>
+    <string name="dateslot_cellsta_title">起始日期</string>
+    <string name="dateslot_cellsta_hint">选择起始日期</string>
+    <string name="dateslot_cellend_title">结束日期</string>
+    <string name="dateslot_cellend_hint">选择结束日期</string>
+    <string name="dateslot_bt_ent">确认</string>
+
+    <string name="dateslot_hintmsg_dateerror">日期格式错误</string>
+    <string name="dateslot_hintmsg_dateoversta">选择的起始日期不能大于今天</string>
+    <string name="dateslot_hintmsg_dateoverend">选择的结束日期不能大于今天</string>
+    <string name="dateslot_hintmsg_date_staend">选择的起始时间不能大于结束时间</string>
+</resources>

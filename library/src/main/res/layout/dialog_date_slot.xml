@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dateslot_padding_y"
+    android:paddingBottom="@dimen/dateslot_padding_y"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/dateslot_shape_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dateslot_padding_x"
+            android:paddingEnd="@dimen/dateslot_padding_x"
+            android:paddingLeft="@dimen/dateslot_padding_x"
+            android:paddingRight="@dimen/dateslot_padding_x"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dateslot_cell_height"
+                android:gravity="center"
+                android:text="@string/dateslot_cellsta_title"
+                android:textColor="@color/dateslot_text"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tvTimeslotSta"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dateslot_cell_height"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:text="@string/dateslot_cellsta_hint"
+                android:textColor="@color/dateslot_theme" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dateslot_line_width"
+            android:layout_height="@dimen/dateslot_line_height"
+            android:layout_gravity="center"
+            android:background="@color/dateslot_line" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dateslot_padding_x"
+            android:paddingEnd="@dimen/dateslot_padding_x"
+            android:paddingLeft="@dimen/dateslot_padding_x"
+            android:paddingRight="@dimen/dateslot_padding_x"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dateslot_cell_height"
+                android:gravity="center"
+                android:text="@string/dateslot_cellend_title"
+                android:textColor="@color/dateslot_text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvTimeslotEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dateslot_cell_height"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:text="@string/dateslot_cellend_hint"
+                android:textColor="@color/dateslot_theme" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btTimeslotEnt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dateslot_bt_height"
+        android:layout_marginTop="@dimen/dateslot_space"
+        android:layout_marginLeft="@dimen/dateslot_padding_x"
+        android:layout_marginStart="@dimen/dateslot_padding_x"
+        android:layout_marginRight="@dimen/dateslot_padding_x"
+        android:layout_marginEnd="@dimen/dateslot_padding_x"
+        android:text="@string/dateslot_bt_ent"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/dateslot_shape_btbg" />
+
+</LinearLayout>
