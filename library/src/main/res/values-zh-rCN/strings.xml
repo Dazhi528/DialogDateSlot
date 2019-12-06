@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="dateslot_cellsta_title">起始日期</string>
     <string name="dateslot_cellsta_hint">选择起始日期</string>

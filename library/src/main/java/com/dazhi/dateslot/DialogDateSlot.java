@@ -64,16 +64,16 @@ public class DialogDateSlot extends AppCompatDialog {
         @Override
         public void onClick(View v) {
             final int tempY = Integer.parseInt(timeSta.substring(0, 4));
-            final int tempM = Integer.parseInt(timeSta.substring(5, 7));
+            final int tempM = Integer.parseInt(timeSta.substring(5, 7))-1;
             final int tempD = Integer.parseInt(timeSta.substring(8, 10));
             new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                     // 转字符串日期格式
                     Calendar calendar= Calendar.getInstance();
-                    calendar.set(Calendar.YEAR, tempY);
-                    calendar.set(Calendar.MONTH, tempM);
-                    calendar.set(Calendar.DAY_OF_MONTH, tempD);
+                    calendar.set(Calendar.YEAR, year);
+                    calendar.set(Calendar.MONTH, month);
+                    calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                     timeSta = dateFormat.format(calendar.getTime());
                     tvTimeslotSta.setText(timeSta);
                 }
@@ -86,18 +86,18 @@ public class DialogDateSlot extends AppCompatDialog {
         @Override
         public void onClick(View v) {
             final int tempY = Integer.parseInt(timeEnd.substring(0, 4));
-            final int tempM = Integer.parseInt(timeEnd.substring(5, 7));
+            final int tempM = Integer.parseInt(timeEnd.substring(5, 7))-1;
             final int tempD = Integer.parseInt(timeEnd.substring(8, 10));
             new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                     // 转字符串日期格式
                     Calendar calendar= Calendar.getInstance();
-                    calendar.set(Calendar.YEAR, tempY);
-                    calendar.set(Calendar.MONTH, tempM);
-                    calendar.set(Calendar.DAY_OF_MONTH, tempD);
+                    calendar.set(Calendar.YEAR, year);
+                    calendar.set(Calendar.MONTH, month);
+                    calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                     timeEnd = dateFormat.format(calendar.getTime());
-                    tvTimeslotSta.setText(timeEnd);
+                    tvTimeslotEnd.setText(timeEnd);
                 }
             }, tempY, tempM, tempD).show();
         }

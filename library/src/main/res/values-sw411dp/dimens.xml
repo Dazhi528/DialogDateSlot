@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<dimen name="dateslot_radius">5.7083dp</dimen>
+	<dimen name="dateslot_padding_x">22.8333dp</dimen>
+	<dimen name="dateslot_padding_y">22.8333dp</dimen>
+	<dimen name="dateslot_space">22.8333dp</dimen>
+	<dimen name="dateslot_cell_height">45.6667dp</dimen>
+	<dimen name="dateslot_bt_height">41.1000dp</dimen>
+	<dimen name="dateslot_line_width">57.0833dp</dimen>
+	<dimen name="dateslot_line_height">2.2833dp</dimen>
+</resources>

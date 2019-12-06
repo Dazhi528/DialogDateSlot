@@ -2,5 +2,5 @@
 <resources>
     <color name="dateslot_theme">#19a0ff</color>
     <color name="dateslot_text">#383838</color>
-    <color name="dateslot_line">#f2f2f2</color>
+    <color name="dateslot_line">#CCCCCC</color>
 </resources>
