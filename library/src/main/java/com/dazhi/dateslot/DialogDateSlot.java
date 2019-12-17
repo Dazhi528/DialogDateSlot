@@ -3,19 +3,18 @@ package com.dazhi.dateslot;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatDialog;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDialog;
 
 public class DialogDateSlot extends AppCompatDialog {
     // 外部入参

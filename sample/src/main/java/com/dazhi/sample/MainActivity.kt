@@ -1,8 +1,8 @@
 package com.dazhi.sample
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.dazhi.dateslot.DialogDateSlot
 import com.dazhi.dateslot.InteDateSlot
 import kotlinx.android.synthetic.main.activity_main.*
