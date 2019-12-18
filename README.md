@@ -6,7 +6,10 @@
 <img width="400" src="./screenshots/dialog_calendar.png"/>
 
 
-### 引入方式
+### 引入方式 
+[![Release](https://img.shields.io/github/release/Dazhi528/DialogDateSlot?style=flat)](https://jitpack.io/#Dazhi528/DialogDateSlot)
+[![API](https://img.shields.io/badge/API-16%2B-green.svg?style=flat)](https://android-arsenal.com/api?level=16)
+
 
 Add it in your root build.gradle at the end of repositories:
 ```
