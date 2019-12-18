@@ -1,9 +1,9 @@
 # DialogDateSlot
 日期时间段选择对话框，如：(2019-10-11 ~ 2019-11-06)
 
-<img src="./screenshots/dialog_dateslot.png"/>
-
-<img src="https://github.com/Dazhi528/DialogDateSlot/blob/master/screenshots/dialog_calendar.png"/>
+<img width="300" src="./screenshots/dialog_dateslot.png"/>
+<p/>
+<img width="400" src="./screenshots/dialog_calendar.png"/>
 
 
 ### 引入方式
