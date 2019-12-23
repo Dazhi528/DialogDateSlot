@@ -19,52 +19,52 @@ import androidx.appcompat.app.AppCompatDialog;
 public class DialogDateSlot extends AppCompatDialog {
     // 外部入参
     final Context context;
-    String timeSta;
-    String timeEnd;
-    final InteDateSlot inteTimeSlot;
+    String dateSta;
+    String dateEnd;
+    final InteDateSlot inteDateSlot;
     // ui
-    private TextView tvTimeslotSta;
-    private TextView tvTimeslotEnd;
-    private Button btTimeslotEnt;
+    private TextView tvDateSlotSta;
+    private TextView tvDateSlotEnd;
+    private Button btDateSlotEnt;
     // 当前日期常量
     final Date dateCur = new Date();
     final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.CHINESE);
 
 
-    public DialogDateSlot(@NonNull Context context, @NonNull String timeSta,
-                          @NonNull String timeEnd, @NonNull InteDateSlot inteTimeSlot) {
+    public DialogDateSlot(@NonNull Context context, @NonNull String dateSta,
+                          @NonNull String dateEnd, @NonNull InteDateSlot inteDateSlot) {
         super(context, R.style.StyleDialogDateSlot);
         setContentView(R.layout.dialog_date_slot);
         //
         this.context = context;
-        this.timeSta = timeSta;
-        this.timeEnd = timeEnd;
-        this.inteTimeSlot = inteTimeSlot;
+        this.dateSta = dateSta;
+        this.dateEnd = dateEnd;
+        this.inteDateSlot = inteDateSlot;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // init
-        tvTimeslotSta = findViewById(R.id.tvTimeslotSta);
-        tvTimeslotEnd = findViewById(R.id.tvTimeslotEnd);
-        btTimeslotEnt = findViewById(R.id.btTimeslotEnt);
+        tvDateSlotSta = findViewById(R.id.tvDateSlotSta);
+        tvDateSlotEnd = findViewById(R.id.tvDateSlotEnd);
+        btDateSlotEnt = findViewById(R.id.btDateSlotEnt);
         // init value
-        tvTimeslotSta.setText(timeSta);
-        tvTimeslotEnd.setText(timeEnd);
+        tvDateSlotSta.setText(dateSta);
+        tvDateSlotEnd.setText(dateEnd);
         // init listener
-        tvTimeslotSta.setOnClickListener(mClickTimeSta);
-        tvTimeslotEnd.setOnClickListener(mClickTimeEnd);
-        btTimeslotEnt.setOnClickListener(mClickBtEnt);
+        tvDateSlotSta.setOnClickListener(mClickDateSta);
+        tvDateSlotEnd.setOnClickListener(mClickDateEnd);
+        btDateSlotEnt.setOnClickListener(mClickBtEnt);
     }
 
     // 点击选择开始时间
-    private View.OnClickListener mClickTimeSta = new View.OnClickListener() {
+    private View.OnClickListener mClickDateSta = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            final int tempY = Integer.parseInt(timeSta.substring(0, 4));
-            final int tempM = Integer.parseInt(timeSta.substring(5, 7))-1;
-            final int tempD = Integer.parseInt(timeSta.substring(8, 10));
+            final int tempY = Integer.parseInt(dateSta.substring(0, 4));
+            final int tempM = Integer.parseInt(dateSta.substring(5, 7))-1;
+            final int tempD = Integer.parseInt(dateSta.substring(8, 10));
             new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -73,20 +73,20 @@ public class DialogDateSlot extends AppCompatDialog {
                     calendar.set(Calendar.YEAR, year);
                     calendar.set(Calendar.MONTH, month);
                     calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                    timeSta = dateFormat.format(calendar.getTime());
-                    tvTimeslotSta.setText(timeSta);
+                    dateSta = dateFormat.format(calendar.getTime());
+                    tvDateSlotSta.setText(dateSta);
                 }
             }, tempY, tempM, tempD).show();
         }
     };
 
     // 点击选择结束时间
-    private View.OnClickListener mClickTimeEnd = new View.OnClickListener() {
+    private View.OnClickListener mClickDateEnd = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            final int tempY = Integer.parseInt(timeEnd.substring(0, 4));
-            final int tempM = Integer.parseInt(timeEnd.substring(5, 7))-1;
-            final int tempD = Integer.parseInt(timeEnd.substring(8, 10));
+            final int tempY = Integer.parseInt(dateEnd.substring(0, 4));
+            final int tempM = Integer.parseInt(dateEnd.substring(5, 7))-1;
+            final int tempD = Integer.parseInt(dateEnd.substring(8, 10));
             new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -95,8 +95,8 @@ public class DialogDateSlot extends AppCompatDialog {
                     calendar.set(Calendar.YEAR, year);
                     calendar.set(Calendar.MONTH, month);
                     calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                    timeEnd = dateFormat.format(calendar.getTime());
-                    tvTimeslotEnd.setText(timeEnd);
+                    dateEnd = dateFormat.format(calendar.getTime());
+                    tvDateSlotEnd.setText(dateEnd);
                 }
             }, tempY, tempM, tempD).show();
         }
@@ -109,7 +109,7 @@ public class DialogDateSlot extends AppCompatDialog {
             // 校验开始日期
             Date checkedDateSta;
             try {
-                checkedDateSta = dateFormat.parse(timeSta);
+                checkedDateSta = dateFormat.parse(dateSta);
             } catch (ParseException e) {
                 e.printStackTrace();
                 Toast.makeText(context,
@@ -126,7 +126,7 @@ public class DialogDateSlot extends AppCompatDialog {
             // 校验结束日期
             Date checkedDateEnd;
             try {
-                checkedDateEnd = dateFormat.parse(timeEnd);
+                checkedDateEnd = dateFormat.parse(dateEnd);
             } catch (ParseException e) {
                 e.printStackTrace();
                 Toast.makeText(context,
@@ -148,7 +148,7 @@ public class DialogDateSlot extends AppCompatDialog {
                 return;
             }
             // 校验通过，接口回调，并关闭对话框
-            inteTimeSlot.call(timeSta, timeEnd);
+            inteDateSlot.call(dateSta, dateEnd);
             dismiss();
         }
     };

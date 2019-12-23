@@ -32,9 +32,9 @@ dependencies {
 见sample目录(kotlin)
 ```
 DialogDateSlot(this, "2019-11-20",
-                    "2019-12-02", InteDateSlot { timeSta, timeEnd ->
+                    "2019-12-02", InteDateSlot { dateSta, dateEnd ->
                 Toast.makeText(this,
-                        "开始：$timeSta ~ 结束：$timeEnd",
+                        "开始：$dateSta ~ 结束：$dateEnd",
                         Toast.LENGTH_LONG)
                         .show()
             }).show()

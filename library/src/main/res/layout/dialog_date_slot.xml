@@ -29,7 +29,7 @@
                 android:textColor="@color/dateslot_text"
                 android:textSize="15sp" />
             <TextView
-                android:id="@+id/tvTimeslotSta"
+                android:id="@+id/tvDateSlotSta"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/dateslot_cell_height"
                 android:gravity="center"
@@ -63,7 +63,7 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/tvTimeslotEnd"
+                android:id="@+id/tvDateSlotEnd"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/dateslot_cell_height"
                 android:gravity="center"
@@ -75,7 +75,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btTimeslotEnt"
+        android:id="@+id/btDateSlotEnt"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dateslot_bt_height"
         android:layout_marginTop="@dimen/dateslot_space"
